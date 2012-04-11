@@ -1,11 +1,8 @@
-name    'jeffmccune-nrpe_basic'
-version '0.0.4'
-source 'git://github.com/jeffmccune/jeffmccune-nrpe_basic.git'
-author 'jeffmccune'
+name    'ekohl-nrpe_basic'
+version '0.0.5'
+source 'git://github.com/ekohl/nrpe_basic.git'
+author 'ekohl'
 license 'Apache License Version 2.0'
 summary 'Manage basic NRPE local checks and the service'
 description 'Manage basic NRPE local checks and the service'
-project_page 'https://github.com/jeffmccune/jeffmccune-nrpe_basic'
-
-## Add dependencies, if any:
-dependency 'puppetlabs/stdlib', '>= 0.1.3'
+project_page 'https://github.com/ekohl/nrpe_basic'

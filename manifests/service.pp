@@ -12,7 +12,7 @@
 #
 class nrpe_basic::service {
 
-  case $operatingsystem {
+  case $::operatingsystem {
     centos, redhat, oel: {
       service { 'nrpe':
         ensure     => running,
@@ -33,7 +33,7 @@ class nrpe_basic::service {
       }
     }
     default: {
-      fail("operatingsystem $operatingsystem is not supported")
+      fail("operatingsystem $::operatingsystem is not supported")
     }
   }
 

@@ -24,8 +24,8 @@ define nrpe_basic::command(
 
 # find out the default nagios paths for plugis
   $defaultdir = $::architecture ? {
-    "x86_64" => "/usr/lib64/nagios/plugins",
-    default  => "/usr/lib/nagios/plugins",
+    'x86_64' => '/usr/lib64/nagios/plugins',
+    default  => '/usr/lib/nagios/plugins',
   }
 
 # if we overrode cplugdir then use that, else go with the nagios default
@@ -36,7 +36,7 @@ define nrpe_basic::command(
   }
 
   case $ensure {
-    "absent":    {
+    'absent':    {
       file{"${nrpe_dir_real}/${name}.cfg":
         ensure => absent,
         notify => Class['nrpe_basic::service'],
