@@ -1,5 +1,5 @@
 name    'ekohl-nrpe_basic'
-version '0.0.5'
+version '0.0.6'
 source 'git://github.com/ekohl/nrpe_basic.git'
 author 'ekohl'
 license 'Apache License Version 2.0'
