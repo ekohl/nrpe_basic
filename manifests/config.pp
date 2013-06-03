@@ -2,14 +2,6 @@
 #
 #   Manage the configuration skeleton for NRPE
 #
-# Parameters:
-#
-# Actions:
-#
-# Requires:
-#
-# Sample Usage:
-#
 class nrpe_basic::config {
   nrpe_basic::command { 'check_puppet_run':
     ensure     => 'present',

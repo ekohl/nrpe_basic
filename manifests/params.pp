@@ -2,22 +2,26 @@
 #
 #   Parameters for the NRPE module.
 #
-# Parameters:
-#
-# Actions:
-#
-# Requires:
-#
-# Sample Usage:
-#
 class nrpe_basic::params {
   $libdir_param = $::architecture ? {
     'x86_64' => 'lib64',
     default  => 'lib',
   }
-  $nrpe_dir = $::operatingsystem ? {
-    /(?i-mx:centos|fedora|redhat|oel)/ => '/etc/nrpe.d',
-    default                            => '/etc/nagios/nrpe.d',
+
+  case $::osfamily {
+    RedHat: {
+      $package_name = 'nrpe'
+      $nrpe_dir     = '/etc/nrpe.d'
+      $service_name = 'nrpe'
+    }
+    Debian: {
+      $package_name = 'nagios-nrpe-server'
+      $nrpe_dir     = '/etc/nagios/nrpe.d'
+      $service_name = 'nagios-nrpe-server'
+    }
+    default: {
+      fail("Module ${module_name} is not supported on ${::osfamily}")
+    }
   }
 
   # find out the default nagios paths for plugis
