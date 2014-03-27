@@ -7,10 +7,10 @@ describe 'nrpe_basic' do
     end
 
     it 'should include classes' do
-      should include_class('nrpe_basic')
-      should include_class('nrpe_basic::install')
-      should include_class('nrpe_basic::config')
-      should include_class('nrpe_basic::service')
+      should contain_class('nrpe_basic')
+      should contain_class('nrpe_basic::install')
+      should contain_class('nrpe_basic::config')
+      should contain_class('nrpe_basic::service')
     end
   end
 
@@ -20,10 +20,10 @@ describe 'nrpe_basic' do
     end
 
     it 'should include classes' do
-      should include_class('nrpe_basic')
-      should include_class('nrpe_basic::install')
-      should include_class('nrpe_basic::config')
-      should include_class('nrpe_basic::service')
+      should contain_class('nrpe_basic')
+      should contain_class('nrpe_basic::install')
+      should contain_class('nrpe_basic::config')
+      should contain_class('nrpe_basic::service')
     end
   end
 
