@@ -13,7 +13,7 @@
 # Sample Usage:
 #
 define nrpe_basic::command(
-  $command,
+  $command    = $title,
   $parameters = '',
   $cplugdir   = 'auto',
   $ensure     = 'present'
